@@ -1,21 +1,27 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 header {
   background-color: #007bff;
   color: white;
   text-align: center;
   padding: 1rem 0;
 }
-
+.sidebar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  /* width: 200px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 main {
   padding: 1rem;
 }
+.content {
+  flex: 1;
+  /* padding: 1rem; */
+}
 
-.note-form {
+.note__form {
   margin-bottom: 1rem;
 }
 
@@ -32,12 +38,24 @@ button {
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  /**/
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
 .note__title {
   margin: 0.4rem 0;
 }
-.note-card {
+.note__list {
+  display: none;
+  margin-top: 1rem;
+}
+.note__card {
   border: 1px solid #ccc;
   padding: 0.6rem;
   margin-bottom: 0.5rem;
@@ -58,9 +76,21 @@ button {
   align-items: center;
   padding: 0.2rem;
 }
+
 @media (min-width: 768px) {
-  main {
-    max-width: 768px;
-    margin: 0 auto;
+  /* .sidebar {
+    height: 100vh;
+  } */
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    /* padding: 2rem; */
+  }
+
+  .note__form,
+  .note__list {
+    display: block;
   }
 }

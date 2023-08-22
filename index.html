@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <header>
-      <h1>Note App</h1>
-    </header>
-    <main>
-      <div class="note-form">
-        <input type="text" class="note__title" placeholder="Note Title" />
-        <textarea class="note__content" placeholder="Enter your note"></textarea>
-        <button id="save__note">Save</button>
-      </div>
-      <div class="note__list">
+    <aside class="sidebar">
+      <button id="add-note-btn">Add Note</button>
+      <button id="view-notes-btn">View Notes</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Note App</h1>
+      </header>
+      <main>
+        <div class="note__form">
+          <input type="text" class="note__title" placeholder="Note Title" />
+          <textarea class="note__content" placeholder="Enter your note"></textarea>
+          <button id="save__note">Save</button>
+        </div>
+        <div class="note__list"></div>
         <!-- Saved notes will be displayed here -->
-        <!-- <div class="note-card">
+        <!-- <div class="note__card">
           <h3 class="note__title">Store note</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="note__footer">
@@ -26,9 +33,17 @@
             <button type="button" class="delete__note">Del</button>
           </div>
         </div> -->
-      </div>
-    </main>
+      </main>
+    </div>
 
     <script src="app.js"></script>
   </body>
 </html>
+<!-- <div class="note-card">
+          <h3 class="note__title">Store note</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="note__footer">
+            <small> Created: july 4 2021</small>
+            <button type="button" class="delete__note">Del</button>
+          </div>
+        </div> -->
